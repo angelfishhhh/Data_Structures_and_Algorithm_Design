@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/selection.dir/src/selection.cpp.o -o /Users/angelfish/Learn/Data_Structures_and_Algorithm_Design/Midterm_Major_Project/bin/selection

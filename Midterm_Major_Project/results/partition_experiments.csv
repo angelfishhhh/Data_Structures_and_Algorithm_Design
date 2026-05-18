@@ -1,0 +1,6 @@
+n,total_value,brute_force_us,dynamic_programming_us,best_difference
+8,92,12,5,0
+12,186,158,5,0
+16,263,3112,12,1
+20,277,50965,7,1
+22,440,137305,8,0

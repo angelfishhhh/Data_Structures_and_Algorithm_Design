@@ -1,0 +1,14 @@
+Cards: 1
+Total value: 7
+BruteForce best difference: 7
+BruteForce pile A sum: 0
+BruteForce pile A indices: (empty)
+BruteForce pile B sum: 7
+BruteForce pile B indices: 1
+BruteForce time_us: 0
+DynamicProgramming best difference: 7
+DynamicProgramming pile A sum: 0
+DynamicProgramming pile A indices: (empty)
+DynamicProgramming pile B sum: 7
+DynamicProgramming pile B indices: 1
+DynamicProgramming time_us: 0

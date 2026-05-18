@@ -1,0 +1,5 @@
+/Users/angelfish/Learn/Data_Structures_and_Algorithm_Design/Midterm_Major_Project/build/CMakeFiles/selection.dir
+/Users/angelfish/Learn/Data_Structures_and_Algorithm_Design/Midterm_Major_Project/build/CMakeFiles/partition.dir
+/Users/angelfish/Learn/Data_Structures_and_Algorithm_Design/Midterm_Major_Project/build/CMakeFiles/mst.dir
+/Users/angelfish/Learn/Data_Structures_and_Algorithm_Design/Midterm_Major_Project/build/CMakeFiles/edit_cache.dir
+/Users/angelfish/Learn/Data_Structures_and_Algorithm_Design/Midterm_Major_Project/build/CMakeFiles/rebuild_cache.dir

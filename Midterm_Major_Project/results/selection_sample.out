@@ -1,0 +1,6 @@
+Input size: 8
+k: 3
+HeapSelect: 3 (time_us: 0)
+RandomizedSelect: 3 (time_us: 2)
+MedianOfMediansSelect: 3 (time_us: 1)
+All algorithms agree: yes
