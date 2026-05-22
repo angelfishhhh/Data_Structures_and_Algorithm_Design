@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -pedantic
+CXX_FLAGS = -O3 -DNDEBUG -std=c++11 -Wall -Wextra -pedantic-errors
 

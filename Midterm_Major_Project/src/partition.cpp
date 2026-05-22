@@ -157,13 +157,17 @@ int main() {
     cout << "Total value: " << accumulate(values.begin(), values.end(), 0) << '\n';
 
     if (values.size() <= 22) {
-        auto [brute, bruteTime] = timedPartition([&]() { return bruteForcePartition(values); });
+        pair<Division, long long> bruteMeasured = timedPartition([&]() { return bruteForcePartition(values); });
+        Division brute = bruteMeasured.first;
+        long long bruteTime = bruteMeasured.second;
         printDivision("BruteForce", brute, bruteTime);
     } else {
         cout << "BruteForce skipped: n exceeds 22\n";
     }
 
-    auto [dynamic, dynamicTime] = timedPartition([&]() { return dynamicProgrammingPartition(values); });
+    pair<Division, long long> dynamicMeasured = timedPartition([&]() { return dynamicProgrammingPartition(values); });
+    Division dynamic = dynamicMeasured.first;
+    long long dynamicTime = dynamicMeasured.second;
     printDivision("DynamicProgramming", dynamic, dynamicTime);
 
     return 0;

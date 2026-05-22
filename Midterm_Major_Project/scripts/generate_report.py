@@ -303,7 +303,7 @@ def generate_report(
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     document.add_paragraph("题目：分治算法、动态规划、贪心算法综合实现")
     document.add_paragraph("学号：学号待填写    姓名：姓名待填写")
-    document.add_paragraph("编程语言及环境：C++17，Apple clang 21.0.0，CMake 4.3.1；报告由 python-docx 生成。")
+    document.add_paragraph("编程语言及环境：C++11，Apple clang 21.0.0，CMake 4.3.1；报告由 python-docx 生成。")
 
     document.add_heading("一、分治算法：第 k 小元素", level=1)
     document.add_paragraph(

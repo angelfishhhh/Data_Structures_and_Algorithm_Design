@@ -5,7 +5,7 @@ BruteForce pile A sum: 10
 BruteForce pile A indices: 4 6 7 8
 BruteForce pile B sum: 11
 BruteForce pile B indices: 1 2 3 5
-BruteForce time_us: 11
+BruteForce time_us: 8
 DynamicProgramming best difference: 1
 DynamicProgramming pile A sum: 10
 DynamicProgramming pile A indices: 1 3 5

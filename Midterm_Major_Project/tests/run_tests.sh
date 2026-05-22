@@ -4,6 +4,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+if ! grep -Fq "set(CMAKE_CXX_STANDARD 11)" CMakeLists.txt; then
+  echo "Expected CMakeLists.txt to require C++11" >&2
+  exit 1
+fi
+
 rm -rf build bin
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build

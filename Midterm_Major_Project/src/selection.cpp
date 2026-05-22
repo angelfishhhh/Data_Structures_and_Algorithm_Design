@@ -48,7 +48,9 @@ int randomizedSelect(vector<int> values, int k) {
     while (left <= right) {
         uniform_int_distribution<int> dist(left, right);
         int pivotValue = values[dist(rng)];
-        auto [lt, gt] = partitionThreeWay(values, left, right, pivotValue);
+        pair<int, int> bounds = partitionThreeWay(values, left, right, pivotValue);
+        int lt = bounds.first;
+        int gt = bounds.second;
         if (target < lt) {
             right = lt - 1;
         } else if (target > gt) {
@@ -77,7 +79,9 @@ int medianOfMedians(vector<int>& values, int left, int right, int target) {
     }
 
     int pivotValue = medianOfMedians(values, left, left + medianCount - 1, left + medianCount / 2);
-    auto [lt, gt] = partitionThreeWay(values, left, right, pivotValue);
+    pair<int, int> bounds = partitionThreeWay(values, left, right, pivotValue);
+    int lt = bounds.first;
+    int gt = bounds.second;
 
     if (target < lt) {
         return medianOfMedians(values, left, lt - 1, target);
@@ -124,9 +128,16 @@ int main() {
         }
     }
 
-    auto [heapResult, heapTime] = timedSelect([&]() { return heapSelect(values, k); });
-    auto [randomResult, randomTime] = timedSelect([&]() { return randomizedSelect(values, k); });
-    auto [medianResult, medianTime] = timedSelect([&]() { return medianOfMediansSelect(values, k); });
+    pair<int, long long> heapMeasured = timedSelect([&]() { return heapSelect(values, k); });
+    pair<int, long long> randomMeasured = timedSelect([&]() { return randomizedSelect(values, k); });
+    pair<int, long long> medianMeasured = timedSelect([&]() { return medianOfMediansSelect(values, k); });
+
+    int heapResult = heapMeasured.first;
+    long long heapTime = heapMeasured.second;
+    int randomResult = randomMeasured.first;
+    long long randomTime = randomMeasured.second;
+    int medianResult = medianMeasured.first;
+    long long medianTime = medianMeasured.second;
 
     cout << "Input size: " << n << '\n';
     cout << "k: " << k << '\n';
